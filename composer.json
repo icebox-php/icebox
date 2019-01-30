@@ -1,0 +1,25 @@
+{
+    "name": "icebox/icebox",
+    "type": "project",
+    "description": "The Icebox Framework.",
+    "keywords": ["framework", "icebox"],
+    "homepage": "http://torovin.com/icebox",
+    "require-dev": {
+    },
+    "require": {
+      "icebox/framework": "dev-master"
+    },
+    "autoload": {
+        "files": [
+            "src/helper/app_helper.php"
+        ],
+        "psr-4": {
+          "App\\": "src/app/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "src/tests/"
+        }
+    }
+}

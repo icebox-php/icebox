@@ -1,0 +1,55 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "90dbcfdc3caa2e80e1316c2ec8bec5dd",
+    "packages": [
+        {
+            "name": "icebox/framework",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/iceboxphp/framework.git",
+                "reference": "7199b2b2ed47282cfa659b53d190bd08abce2c0c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/iceboxphp/framework/zipball/7199b2b2ed47282cfa659b53d190bd08abce2c0c",
+                "reference": "7199b2b2ed47282cfa659b53d190bd08abce2c0c",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "6.5"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/helper.php"
+                ],
+                "psr-4": {
+                    "Icebox\\": "src/icebox/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "The Icebox Framework.",
+            "homepage": "http://torovin.com/icebox",
+            "keywords": [
+                "framework",
+                "icebox"
+            ],
+            "time": "2019-01-29T17:55:25+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "icebox/framework": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
