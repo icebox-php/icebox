@@ -2,6 +2,14 @@
 
 define('PHP_ACTIVERECORD_AUTOLOAD_DISABLE', true);
 
+// $db = include '../database.php';
+// $dev = $db['development'];
+// $test = $db['test'];
+// $prod = $db['production'];
+
+// function prepare_db_connection_string($environment) {
+// }
+
 ActiveRecord\Config::initialize(function($cfg)
 {
    $cfg->set_connections(
