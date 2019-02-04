@@ -4,10 +4,11 @@
     "description": "The Icebox Framework.",
     "keywords": ["framework", "icebox"],
     "homepage": "http://torovin.com/icebox",
-    "require-dev": {
-    },
     "require": {
-      "icebox/framework": "dev-master"
+      "icebox/framework": "dev-master",
+      "icebox/activerecord": "dev-master"
+    },
+    "require-dev": {
     },
     "autoload": {
         "files": [

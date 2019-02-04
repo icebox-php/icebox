@@ -16,6 +16,7 @@ $index_page = '/index.php';
 
 $app = new App(__FILE__, $project_directory);
 
+include __DIR__.'/../src/config/initializers.php';
 
 $routes = include __DIR__.'/../src/config/routes.php';
 $matcher = $routes->url_matcher();
