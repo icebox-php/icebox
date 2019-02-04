@@ -9,6 +9,8 @@ use Icebox\Controller;
 use Icebox\Request;
 use Icebox\Response;
 
+define('PROJECT_SOURCE_DIRECTORY', __DIR__.'/../src');
+
 $project_directory = '/icebox/public';
 
 $index_page = '/index.php';
@@ -16,9 +18,9 @@ $index_page = '/index.php';
 
 $app = new App(__FILE__, $project_directory);
 
-include __DIR__.'/../src/config/initializers.php';
+include PROJECT_SOURCE_DIRECTORY.'/config/initializers.php';
 
-$routes = include __DIR__.'/../src/config/routes.php';
+$routes = include PROJECT_SOURCE_DIRECTORY.'/config/routes.php';
 $matcher = $routes->url_matcher();
 
 // var_dump($matcher);
