@@ -3,6 +3,8 @@
 session_start();
 
 require_once __DIR__.'/../vendor/autoload.php';
+define('PROJECT_SOURCE_DIRECTORY', __DIR__.'/../src');
+include PROJECT_SOURCE_DIRECTORY.'/config/initializers.php';
 
 use Icebox\App;
 use Icebox\Controller;
