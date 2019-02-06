@@ -28,7 +28,7 @@ class PageController extends AppController
     }
 
     public function posts() {
-       $posts = []; //Post::all();
+       $posts = Post::find('all');
        // return $this->render();
       return $this->render(null, [ 'posts' => $posts ]);
     }

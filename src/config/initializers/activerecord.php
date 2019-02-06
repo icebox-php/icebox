@@ -1,7 +1,5 @@
 <?php
 
-define('PHP_ACTIVERECORD_AUTOLOAD_DISABLE', true);
-
 ActiveRecord\Config::initialize(function($cfg)
 {
    $cfg->set_connections(
