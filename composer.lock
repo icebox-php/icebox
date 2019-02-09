@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4a70d2804b42151486d8c34749301509",
+    "content-hash": "c67884ea5c440f7c698d987ff072c0df",
     "packages": [
         {
             "name": "icebox/activerecord",
@@ -52,12 +52,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/iceboxphp/framework.git",
-                "reference": "74ee723eb03384ac654a3221b1d82842ed25a750"
+                "reference": "6283492da190628cfd9e09c08de276fc8fa575ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/iceboxphp/framework/zipball/74ee723eb03384ac654a3221b1d82842ed25a750",
-                "reference": "74ee723eb03384ac654a3221b1d82842ed25a750",
+                "url": "https://api.github.com/repos/iceboxphp/framework/zipball/6283492da190628cfd9e09c08de276fc8fa575ba",
+                "reference": "6283492da190628cfd9e09c08de276fc8fa575ba",
                 "shasum": ""
             },
             "require": {
@@ -82,17 +82,16 @@
                 "framework",
                 "icebox"
             ],
-            "time": "2019-02-04T17:52:23+00:00"
+            "time": "2019-02-09T09:32:53+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
-        "icebox/framework": 20,
-        "icebox/activerecord": 20
+        "icebox/framework": 20
     },
-    "prefer-stable": false,
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": []

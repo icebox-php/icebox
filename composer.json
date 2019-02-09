@@ -5,8 +5,7 @@
     "keywords": ["framework", "icebox"],
     "homepage": "http://torovin.com/icebox",
     "require": {
-      "icebox/framework": "dev-master",
-      "icebox/activerecord": "dev-master"
+      "icebox/framework": "dev-master"
     },
     "require-dev": {
     },
@@ -22,5 +21,7 @@
         "psr-4": {
             "Tests\\": "src/tests/"
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
