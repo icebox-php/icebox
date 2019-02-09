@@ -11,7 +11,7 @@ use Icebox\Response;
 
 define('PROJECT_SOURCE_DIRECTORY', dirname(__DIR__).'/src');
 
-$project_directory = '/icebox-local/public';
+$project_directory = '/icebox/public';
 
 $index_page = '/index.php';
 
