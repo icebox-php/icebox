@@ -9,7 +9,7 @@ use Icebox\Controller;
 use Icebox\Request;
 use Icebox\Response;
 
-define('PROJECT_SOURCE_DIRECTORY', __DIR__.'/../src');
+define('PROJECT_SOURCE_DIRECTORY', dirname(__DIR__).'/src');
 
 $project_directory = '/icebox/public';
 
