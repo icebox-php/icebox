@@ -40,7 +40,7 @@ File location: <?php echo __FILE__ ?>
       <td>
         <a class="btn btn-primary btn-sm" href="<?php echo App::url('/posts/:id/edit', array(':id' => $post->id)); ?>">Edit</a>
 
-        <form class="inline-block" action="<?php echo App::url('/posts/:id', array(':id' => $post->id)); ?>" method="post">
+        <form class="confirm-delete-form inline-block" action="<?php echo App::url('/posts/:id', array(':id' => $post->id)); ?>" method="post">
           <input type="hidden" name="_method" value="delete">
           <button type="submit" class="btn btn-danger btn-sm">Delete</button>
         </form>

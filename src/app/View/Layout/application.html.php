@@ -72,6 +72,7 @@ use Icebox\App;
 <script src="<?php echo App::root_url('/assets/js/jquery-3.3.1.slim.min.js'); ?>"></script>
 <script src="<?php echo App::root_url('/assets/js/popper.min.js'); ?>">></script>
 <script src="<?php echo App::root_url('/assets/js/bootstrap.min.js'); ?>">></script>
+<script src="<?php echo App::root_url('/assets/js/site.js'); ?>">></script>
 
 </body>
 </html>
