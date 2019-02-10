@@ -12,13 +12,11 @@ use Icebox\App;
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="<?php echo App::root_url('/assets/css/bootstrap.min.css'); ?>">
+    <link rel="stylesheet" href="<?php echo App::root_url('/assets/css/site.css'); ?>">
   </head>
   <body>
     <?php $this->render('/Layout/_nav'); ?>
 
-<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-  <h3>Application Layout</h3>
-</div>
 
 <div class="container">
 

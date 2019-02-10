@@ -1,3 +1,22 @@
-This is posts#show page <br><br>
+<?php
+use Icebox\App;
+?>
 
-File location: <?php echo __FILE__ ?>
+<h5 class="margin-bottom-20">Show post</h5>
+
+<table class="table table-responsive">
+
+<?php foreach($var['post']->attributes() as $attr => $text) { ?>
+    <tr>
+      <?php // var_dump($attribute); ?>
+      <th><?php echo $attr; ?></th>
+      <td><?php echo $text; ?></td>
+    </tr>
+<?php } ?>
+
+</table>
+
+<p>
+  <a href="<?php echo App::url('/posts/:id/edit', array(':id' => $var['post']->id)); ?>">Edit</a> |
+  <a href="<?php echo App::url('/posts'); ?>">Back</a>
+</p>
