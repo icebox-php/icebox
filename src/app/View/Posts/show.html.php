@@ -6,7 +6,7 @@ use Icebox\App;
 
 <table class="table table-responsive">
 
-<?php foreach($var['post']->attributes() as $attr => $text) { ?>
+<?php foreach($post->attributes() as $attr => $text) { ?>
     <tr>
       <?php // var_dump($attribute); ?>
       <th><?php echo $attr; ?></th>
@@ -17,6 +17,6 @@ use Icebox\App;
 </table>
 
 <p>
-  <a href="<?php echo App::url('/posts/:id/edit', array(':id' => $var['post']->id)); ?>">Edit</a> |
+  <a href="<?php echo App::url('/posts/:id/edit', array(':id' => $post->id)); ?>">Edit</a> |
   <a href="<?php echo App::url('/posts'); ?>">Back</a>
 </p>

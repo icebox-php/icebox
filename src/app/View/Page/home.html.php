@@ -4,7 +4,7 @@
 
 <p class="underline-text">Received this text from controller:</p>
 
-<h3><?php echo $var['text']; ?></h3>
+<h3><?php echo $text; ?></h3>
 
 <?php $this->start_content('user_style'); ?>
   <style type="text/css">

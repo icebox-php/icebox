@@ -8,7 +8,7 @@ File location: <?php echo __FILE__ ?>
 
 <?php
 $this->render('_form', [
-  'post' => $var['post'],
+  'post' => $post,
   'action' => App::url('/posts'),
   'method' => 'post',
   'button_text' => 'Create'

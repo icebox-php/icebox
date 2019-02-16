@@ -27,12 +27,6 @@ class PageController extends AppController
       return $this->redirect(App::root_url('/posts'));
     }
 
-    public function posts() {
-       $posts = Post::find('all');
-       // return $this->render();
-      return $this->render(null, [ 'posts' => $posts ]);
-    }
-
     public function about() {
       return $this->render();
     }

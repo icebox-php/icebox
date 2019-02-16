@@ -8,8 +8,8 @@ File location: <?php echo __FILE__ ?>
 
 <?php
 $this->render('_form', array(
-  'post' => $var['post'],
-  'action' => App::url('/posts/:id', array(':id' => $var['post']->id)),
+  'post' => $post,
+  'action' => App::url('/posts/:id', array(':id' => $post->id)),
   'method' => 'put',
   'button_text' => 'Update'
 ));

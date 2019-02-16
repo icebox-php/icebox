@@ -23,7 +23,7 @@ File location: <?php echo __FILE__ ?>
     <th></th>
   </tr>
 
-  <?php foreach($var['posts'] as $post) { ?>
+  <?php foreach($posts as $post) { ?>
     <tr>
       <td>
         <a href="<?php echo App::url('posts/:id', [':id' => $post->id]); ?>">
