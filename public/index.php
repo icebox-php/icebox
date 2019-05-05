@@ -9,6 +9,8 @@ use Icebox\Controller;
 use Icebox\Request;
 use Icebox\Response;
 
+define('CATCH_WARNING', true);
+
 define('PROJECT_SOURCE_DIRECTORY', dirname(__DIR__).'/src');
 
 $project_directory = '/icebox-local/public';
