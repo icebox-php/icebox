@@ -12,6 +12,9 @@ use Icebox\Response;
 define('CATCH_WARNING', true);
 define('ICEBOX_DEBUG', true);
 
+define('ICEBOX_DIRECTORY_PUBLIC', __DIR__);
+define('ICEBOX_DIRECTORY_SRC', dirname(__DIR__).'/src');
+
 define('PROJECT_SOURCE_DIRECTORY', dirname(__DIR__).'/src');
 
 $project_directory = '/icebox-local/public';
