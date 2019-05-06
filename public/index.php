@@ -10,6 +10,7 @@ use Icebox\Request;
 use Icebox\Response;
 
 define('CATCH_WARNING', true);
+define('ICEBOX_DEBUG', true);
 
 define('PROJECT_SOURCE_DIRECTORY', dirname(__DIR__).'/src');
 
