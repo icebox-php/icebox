@@ -27,7 +27,7 @@ use Icebox\App;
 
 
   <div class="">
-    <?php $this->yield(); ?>
+    <?php $this->yield_html(); ?>
   </div>
 
   <footer class="pt-4 my-md-5 pt-md-5 border-top">

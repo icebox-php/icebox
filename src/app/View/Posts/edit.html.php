@@ -2,9 +2,8 @@
 use Icebox\App;
 ?>
 
-This is posts#edit page <br><br>
-
-File location: <?php echo __FILE__ ?>
+<h5>Edit post</h5>
+<hr>
 
 <?php
 $this->render('_form', array(

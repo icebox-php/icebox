@@ -11,11 +11,11 @@ class PostsController extends AppController
 {
     public function index()
     {
-      $posts = Post::find('all');
-     return $this->render(null, array( 'posts' => $posts ));
+        $posts = Post::find('all');
+        return $this->render(null, array( 'posts' => $posts ));
     }
 
-    public function new()
+    public function action_new()
     {
         return $this->render(null, [ 'post' => new Post() ]);
     }
@@ -26,6 +26,15 @@ class PostsController extends AppController
         $saved = $post->save();
 
         if($saved) {
+
+            if(isset($_FILES['picture'])) {
+              $pictue_file_name = md5(microtime()) . '.jpg';
+              $path = ICEBOX_DIRECTORY_PUBLIC . '/images/' . $pictue_file_name;
+              move_uploaded_file($_FILES['picture']['tmp_name'], $path);
+              $post->picture = $pictue_file_name;
+              $post->save(false);
+            }
+
             $this->flash('success', 'Saved successfully');
             return $this->redirect(App::url('posts/:id', [':id' => $post->id]));
         } else {
@@ -68,6 +77,6 @@ class PostsController extends AppController
     }
 
     private function post_params() {
-      return $this->filter_post_params(array('title', 'content'));
+      return $this->filter_post_params(array('title', 'content', 'published', 'publish_date', 'create_time', 'decimal_col', 'float_col', 'int_col', 'time_col', 'country'));
     }
 }

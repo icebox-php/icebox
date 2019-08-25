@@ -1,19 +1,14 @@
 <?php
 use Icebox\App;
 ?>
-This is posts#index page <br><br>
 
-File location: <?php echo __FILE__ ?>
-
-<br><br>
-
-<hr>
-
-<h5>All Posts</h5>
+<h5>Posts</h5>
 
 <hr>
 
 <a href="<?php echo App::url('/posts/new'); ?>">Add new post</a>
+
+
 
 <table class="table">
   <tr>
@@ -32,11 +27,10 @@ File location: <?php echo __FILE__ ?>
       </td>
       <td>
         <a href="<?php echo App::url('posts/:id', [':id' => $post->id]); ?>">
-          <?php echo $post->title; ?>
+          <?php echo h($post->title); ?>
         </a>
       </td>
-      <!-- <td><?php #echo $post->title; ?></td> -->
-      <td><?php echo $post->content; ?></td>
+      <td><?php echo h($post->content); ?></td>
       <td>
         <a class="btn btn-primary btn-sm" href="<?php echo App::url('/posts/:id/edit', array(':id' => $post->id)); ?>">Edit</a>
 

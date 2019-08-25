@@ -6,14 +6,17 @@ use Icebox\App;
 
 <table class="table table-responsive">
 
-<?php foreach($post->attributes() as $attr => $text) { ?>
+  <?php foreach($post->attributes() as $attr => $text) { ?>
     <tr>
-      <?php // var_dump($attribute); ?>
       <th><?php echo $attr; ?></th>
       <td><?php echo $text; ?></td>
     </tr>
-<?php } ?>
+  <?php } ?>
 
+  <tr>
+    <th>Picture</th>
+    <td><img src="<?php echo App::root_url(); ?>/images/<?php echo $post->picture; ?>" alt=""> </td>
+  </tr>
 </table>
 
 <p>
