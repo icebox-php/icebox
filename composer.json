@@ -1,5 +1,5 @@
 {
-    "name": "icebox/icebox",
+    "name": "icebox-php/icebox",
     "type": "project",
     "description": "The Icebox Framework.",
     "keywords": ["framework", "icebox"],
