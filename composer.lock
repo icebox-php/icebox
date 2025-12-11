@@ -4,68 +4,26 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c67884ea5c440f7c698d987ff072c0df",
+    "content-hash": "30494dfb901f00da338a2afbd4b33309",
     "packages": [
         {
-            "name": "icebox/activerecord",
+            "name": "icebox-php/framework",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/iceboxphp/activerecord.git",
-                "reference": "f9e128b449ab12d748f085a6468d6efbc051ab20"
+                "url": "https://github.com/icebox-php/framework.git",
+                "reference": "16d3006fbe2099e42e440170fb64a9307023060b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/iceboxphp/activerecord/zipball/f9e128b449ab12d748f085a6468d6efbc051ab20",
-                "reference": "f9e128b449ab12d748f085a6468d6efbc051ab20",
+                "url": "https://api.github.com/repos/icebox-php/framework/zipball/16d3006fbe2099e42e440170fb64a9307023060b",
+                "reference": "16d3006fbe2099e42e440170fb64a9307023060b",
                 "shasum": ""
             },
-            "require": {
-                "php": ">=5.3.0"
-            },
             "require-dev": {
-                "pear/log": "~1.12",
-                "pear/pear_exception": "1.0-beta1",
-                "phpunit/phpunit": "4.*"
+                "phpunit/phpunit": "12.5.3"
             },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "ActiveRecord.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "activerecord is an open source ORM library based on the ActiveRecord pattern.",
-            "homepage": "http://torovin.com",
-            "keywords": [
-                "activerecord",
-                "orm"
-            ],
-            "time": "2019-01-30T06:40:07+00:00"
-        },
-        {
-            "name": "icebox/framework",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/iceboxphp/framework.git",
-                "reference": "6283492da190628cfd9e09c08de276fc8fa575ba"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/iceboxphp/framework/zipball/6283492da190628cfd9e09c08de276fc8fa575ba",
-                "reference": "6283492da190628cfd9e09c08de276fc8fa575ba",
-                "shasum": ""
-            },
-            "require": {
-                "icebox/activerecord": "@dev"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "6.5"
-            },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "files": [
@@ -82,17 +40,22 @@
                 "framework",
                 "icebox"
             ],
-            "time": "2019-02-09T09:32:53+00:00"
+            "support": {
+                "issues": "https://github.com/icebox-php/framework/issues",
+                "source": "https://github.com/icebox-php/framework/tree/master"
+            },
+            "time": "2025-12-11T17:26:06+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "icebox/framework": 20
+        "icebox-php/framework": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": []
+    "platform": {},
+    "platform-dev": {},
+    "plugin-api-version": "2.6.0"
 }

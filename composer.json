@@ -5,7 +5,7 @@
     "keywords": ["framework", "icebox"],
     "homepage": "http://torovin.com/icebox",
     "require": {
-      "icebox/framework": "dev-master"
+      "icebox-php/framework": "dev-master"
     },
     "require-dev": {
     },
