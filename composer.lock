@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "30494dfb901f00da338a2afbd4b33309",
+    "content-hash": "b2ef184d5e34ee7eb6d89db7bb532c10",
     "packages": [
         {
             "name": "icebox-php/framework",
-            "version": "dev-master",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/icebox-php/framework.git",
-                "reference": "16d3006fbe2099e42e440170fb64a9307023060b"
+                "reference": "ddbdb76882fbf40c2b69389b7db0825846b08007"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/icebox-php/framework/zipball/16d3006fbe2099e42e440170fb64a9307023060b",
-                "reference": "16d3006fbe2099e42e440170fb64a9307023060b",
+                "url": "https://api.github.com/repos/icebox-php/framework/zipball/ddbdb76882fbf40c2b69389b7db0825846b08007",
+                "reference": "ddbdb76882fbf40c2b69389b7db0825846b08007",
                 "shasum": ""
             },
             "require-dev": {
@@ -30,7 +30,7 @@
                     "src/helper.php"
                 ],
                 "psr-4": {
-                    "Icebox\\": "src/icebox/"
+                    "Icebox\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -42,9 +42,9 @@
             ],
             "support": {
                 "issues": "https://github.com/icebox-php/framework/issues",
-                "source": "https://github.com/icebox-php/framework/tree/master"
+                "source": "https://github.com/icebox-php/framework/tree/main"
             },
-            "time": "2025-12-11T17:26:06+00:00"
+            "time": "2025-12-12T13:15:48+00:00"
         }
     ],
     "packages-dev": [],

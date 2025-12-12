@@ -7,7 +7,7 @@
     "license": "MIT",
     "homepage": "http://torovin.com/icebox",
     "require": {
-      "icebox-php/framework": "dev-master"
+      "icebox-php/framework": "dev-main"
     },
     "require-dev": {
     },
