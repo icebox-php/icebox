@@ -3,6 +3,8 @@
     "type": "project",
     "description": "The Icebox Framework.",
     "keywords": ["framework", "icebox"],
+    "version": "0.1.0",
+    "license": "MIT",
     "homepage": "http://torovin.com/icebox",
     "require": {
       "icebox-php/framework": "dev-master"
