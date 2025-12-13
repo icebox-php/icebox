@@ -1,5 +1,12 @@
-Home: http://localhost/ice-box/index.php
-Page 2: http://localhost/ice-box/index.php/leap_year/2012
+# How to create icebox project
+
+`composer create-project icebox-php/icebox my-app`
+
+
+Home: http://localhost/my-app/index.php  
+Page 2: http://localhost/my-app/index.php/leap_year/2012
+
+
 
 # How to run this web-app
 
@@ -8,8 +15,8 @@ $ composer install
 
 # Example urls to test params
 
-valid url: http://localhost/ice-box/about/marketing/item/5/title/some-text
-invalid url: http://localhost/ice-box/about/marketing/item/5/title2/some-text
+valid url: http://localhost/my-app/about/marketing/item/5/title/some-text  
+invalid url: http://localhost/my-app/about/marketing/item/5/title2/some-text
 
 
 # How to run testsuite
