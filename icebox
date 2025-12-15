@@ -9,14 +9,14 @@ define('ICEBOX_CLI', true);
 $_SERVER['HTTP_HOST'] = 'icebox.cli';
 $_SERVER['SERVER_PORT'] = 80;
 
-define('PROJECT_SOURCE_DIRECTORY', __DIR__.'/src');
+define('ROOT_DIR', __DIR__);
 
 $project_directory = '';
 
 $app = new App(__FILE__, $project_directory);
 
-include PROJECT_SOURCE_DIRECTORY.'/config/initializers.php';
+include ROOT_DIR.'/config/initializers.php';
 
-$routes = include PROJECT_SOURCE_DIRECTORY.'/config/routes.php';
+$routes = include ROOT_DIR.'/config/routes.php';
 
 require 'vendor/icebox/framework/icebox';

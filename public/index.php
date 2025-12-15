@@ -9,13 +9,13 @@ use Icebox\Controller;
 use Icebox\Request;
 use Icebox\Response;
 
-define('CATCH_WARNING', true);
-define('ICEBOX_DEBUG', true);
+define('WARNING', true);
+define('DEBUG', true);
 
-define('ICEBOX_DIRECTORY_PUBLIC', __DIR__);
-define('ICEBOX_DIRECTORY_SRC', dirname(__DIR__).'/src');
+// define('ICEBOX_DIRECTORY_PUBLIC', __DIR__);
+// define('ICEBOX_DIRECTORY_SRC', dirname(__DIR__).'/src');
 
-define('PROJECT_SOURCE_DIRECTORY', dirname(__DIR__).'/src');
+define('ROOT_DIR', dirname(__DIR__));
 
 $project_directory = '/icebox-local/public';
 
@@ -24,9 +24,9 @@ $index_page = '/index.php';
 
 $app = new App(__FILE__, $project_directory);
 
-include PROJECT_SOURCE_DIRECTORY.'/config/initializers.php';
+include ROOT_DIR.'/config/initializers.php';
 
-$routes = include PROJECT_SOURCE_DIRECTORY.'/config/routes.php';
+$routes = include ROOT_DIR.'/config/routes.php';
 $matcher = $routes->url_matcher();
 
 // var_dump($matcher);
