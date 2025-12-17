@@ -4,26 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b2ef184d5e34ee7eb6d89db7bb532c10",
+    "content-hash": "f6f8a50d9a7dac6c0e2326200d9eb71e",
     "packages": [
         {
             "name": "icebox-php/framework",
             "version": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/icebox-php/framework.git",
-                "reference": "ddbdb76882fbf40c2b69389b7db0825846b08007"
-            },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/icebox-php/framework/zipball/ddbdb76882fbf40c2b69389b7db0825846b08007",
-                "reference": "ddbdb76882fbf40c2b69389b7db0825846b08007",
-                "shasum": ""
+                "type": "path",
+                "url": "../icebox-framework",
+                "reference": "f9646997e5437fd2723b7a10e0a8980912d9303f"
             },
             "require-dev": {
-                "phpunit/phpunit": "12.5.3"
+                "phpunit/phpunit": "12.5.3",
+                "psy/psysh": "^0.12.17"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "files": [
@@ -33,18 +27,23 @@
                     "Icebox\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Icebox\\Tests\\": "tests/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
             "description": "The Icebox Framework.",
             "homepage": "http://torovin.com/icebox",
             "keywords": [
                 "framework",
                 "icebox"
             ],
-            "support": {
-                "issues": "https://github.com/icebox-php/framework/issues",
-                "source": "https://github.com/icebox-php/framework/tree/main"
-            },
-            "time": "2025-12-12T13:15:48+00:00"
+            "transport-options": {
+                "relative": true
+            }
         }
     ],
     "packages-dev": [],
@@ -57,5 +56,5 @@
     "prefer-lowest": false,
     "platform": {},
     "platform-dev": {},
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.9.0"
 }

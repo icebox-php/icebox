@@ -1,32 +1,43 @@
 <?php
 
+$uri = urldecode(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+if ($uri !== '/' && file_exists(__DIR__ . $uri)) {
+    return false; // Let PHP serve the static file
+}
+
+$env_file = __DIR__ . '/vendor/icebox-php/framework/src/env.php';
+if (!file_exists($env_file)) {
+    echo "Error: src/env.php not found at $env_file. Run 'composer install' first.\n";
+    exit(1);
+}
+require_once $env_file;
+
+// Set APP_ENV if not already set
+/** @disregard P1010 Undefined function */
+if(env('APP_ENV') === null) {
+    if (isset($argv[1]) && $argv[1] === 'test') {
+        $_ENV['APP_ENV'] = 'test';
+    } else {
+        $_ENV['APP_ENV'] = 'development';
+    }
+}
+
+// Bootstrap the application
+require_once dirname(__DIR__) . '/config/boot.php';
+
 session_start();
 
-require_once __DIR__.'/../vendor/autoload.php';
-
 use Icebox\App;
-use Icebox\Controller;
-use Icebox\Request;
-use Icebox\Response;
 
-define('WARNING', true);
-define('DEBUG', true);
+// $project_directory = '/icebox-skeleton/public';
+// $project_directory = '';
 
-// define('ICEBOX_DIRECTORY_PUBLIC', __DIR__);
-// define('ICEBOX_DIRECTORY_SRC', dirname(__DIR__).'/src');
+// $app = new App(__FILE__, $project_directory);
+$app = new App(__FILE__);
 
-define('ROOT_DIR', dirname(__DIR__));
+include ROOT_DIR . '/config/initializer.php';
 
-$project_directory = '/icebox-local/public';
-
-$index_page = '/index.php';
-
-
-$app = new App(__FILE__, $project_directory);
-
-include ROOT_DIR.'/config/initializers.php';
-
-$routes = include ROOT_DIR.'/config/routes.php';
+$routes = include ROOT_DIR . '/config/routes.php';
 $matcher = $routes->url_matcher();
 
 // var_dump($matcher);
