@@ -1,6 +1,14 @@
 # How to create icebox project
 
 `composer create-project icebox-php/icebox my-app`
+`cd my-app`
+`composer install`
+`php icebox server`
+It will run server to http://localhost:8000
+
+If you want to run in different host and port
+`php icebox server --host=0.0.0.0 --port=8022`
+It will run server to http://0.0.0.0:8022
 
 
 Home: http://localhost/my-app/index.php  
