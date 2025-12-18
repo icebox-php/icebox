@@ -5,7 +5,7 @@ if ($uri !== '/' && file_exists(__DIR__ . $uri)) {
     return false; // Let PHP serve the static file
 }
 
-$env_file = __DIR__ . '/vendor/icebox-php/framework/src/env.php';
+$env_file = dirname(__DIR__) . '/vendor/icebox-php/framework/src/env.php';
 if (!file_exists($env_file)) {
     echo "Error: src/env.php not found at $env_file. Run 'composer install' first.\n";
     exit(1);
