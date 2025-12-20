@@ -11,11 +11,8 @@
     "require-dev": {
     },
     "autoload": {
-        "files": [
-            "src/helper/app_helper.php"
-        ],
         "psr-4": {
-          "App\\": "src/app/"
+          "App\\": "app/"
         }
     },
     "autoload-dev": {

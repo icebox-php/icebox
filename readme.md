@@ -52,7 +52,7 @@ if($saved) {
 
     if(isset($_FILES['picture'])) {
       $pictue_file_name = md5(microtime()) . '.jpg';
-      $path = ICEBOX_DIRECTORY_PUBLIC . '/images/' . $pictue_file_name;
+      $path = 'public/images/' . $pictue_file_name;
       move_uploaded_file($_FILES['picture']['tmp_name'], $path);
       $post->picture = $pictue_file_name;
       $post->save(false);

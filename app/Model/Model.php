@@ -2,7 +2,7 @@
 
 namespace App\Model;
 
-use ActiveRecord;
+use Icebox\ActiveRecord;
 
 class Model extends ActiveRecord\Model {
 

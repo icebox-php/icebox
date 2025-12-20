@@ -1,33 +1,22 @@
 <?php
-$env_file = __DIR__ . '/vendor/icebox-php/framework/src/env.php';
-if (!file_exists($env_file)) {
-    echo "Error: src/env.php not found at $env_file. Run 'composer install' first.\n";
+$icebox_cli = __DIR__ . '/vendor/icebox-php/framework/icebox';
+if (!file_exists($icebox_cli)) {
+    echo "Error: $icebox_cli not found. Run 'composer install' first.\n";
     exit(1);
-}
-require_once $env_file;
-
-// Set APP_ENV if not already set
-/** @disregard P1010 Undefined function */
-if(env('APP_ENV') === null) {
-    if (isset($argv[1]) && $argv[1] === 'test') {
-        $_ENV['APP_ENV'] = 'test';
-    } else {
-        $_ENV['APP_ENV'] = 'development';
-    }
 }
 
 // Bootstrap the application
-require_once __DIR__ . '/config/boot.php';
+require __DIR__ . '/config/boot.php';
 
 // Settings for CLI
-define('ICEBOX_CLI', true);
-$_SERVER['HTTP_HOST'] = 'icebox.cli';
-$_SERVER['SERVER_PORT'] = 80;
+// define('ICEBOX_CLI', true);
+// $_SERVER['HTTP_HOST'] = 'icebox.cli';
+// $_SERVER['SERVER_PORT'] = 80;
 
 // $project_directory = '';
 // $app = new App(__FILE__, $project_directory);
 
-include ROOT_DIR.'/config/initializer.php';
+// include ROOT_DIR.'/config/initializer.php';
 // $routes = include ROOT_DIR.'/config/routes.php';
 
 require 'vendor/icebox-php/framework/icebox';
