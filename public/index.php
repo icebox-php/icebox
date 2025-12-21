@@ -5,23 +5,6 @@ if ($uri !== '/' && file_exists(__DIR__ . $uri)) {
     return false; // Let PHP serve the static file
 }
 
-$env_file = dirname(__DIR__) . '/vendor/icebox-php/framework/src/env.php';
-if (!file_exists($env_file)) {
-    echo "Error: src/env.php not found at $env_file. Run 'composer install' first.\n";
-    exit(1);
-}
-require_once $env_file;
-
-// Set APP_ENV if not already set
-/** @disregard P1010 Undefined function */
-if(env('APP_ENV') === null) {
-    if (isset($argv[1]) && $argv[1] === 'test') {
-        $_ENV['APP_ENV'] = 'test';
-    } else {
-        $_ENV['APP_ENV'] = 'development';
-    }
-}
-
 // Bootstrap the application
 require_once dirname(__DIR__) . '/config/boot.php';
 

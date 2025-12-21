@@ -1,4 +1,13 @@
 vendor/
 .idea/
 
-src/config/database.php
+# Ignore all environment files.
+/.env*
+
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+config/database.php

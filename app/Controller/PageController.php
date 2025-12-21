@@ -10,6 +10,7 @@ class PageController extends AppController
 {
     public function home()
     {
+        \Icebox\Log::info('--- page#home ---');
         return $this->render(null, [
           'text' => 'This is home page!'
         ], [

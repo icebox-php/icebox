@@ -1,5 +1,8 @@
 <?php use Icebox\App; ?>
 
+<br>
+<h3><?php echo $text; ?></h3><br>
+
 <p>This is LeapYear#index file</p>
 
 <p>File Location: <?php echo __DIR__; ?></p>
@@ -8,9 +11,8 @@
 
 <?php //echo ICEBOX_DIRECTORY_PUBLIC; //echo App::file(); ?> <br>
 <?php //echo ICEBOX_DIRECTORY_SRC; //echo App::file(); ?> <br>
-<?php echo md5(microtime()); ?>
-
-<h3><?php echo $text; ?></h3>
+<div>Random string: <?php echo md5(microtime()); ?></div>
+<div><?php \Icebox\Log::info('--- home page view ---'); ?></div>
 
 <?php $this->start_content('user_style'); ?>
   <style type="text/css">

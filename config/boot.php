@@ -6,8 +6,40 @@
 // define('APP_ENV', getenv('APP_ENV'));
 // define('APP_DEBUG', APP_ENV === 'development');
 
-// Define root directory
+#----------------------
+# Define root directory
 define('ROOT_DIR', dirname(__DIR__));
 
-// Load Composer autoloader
+#-------------------------
+# Load Composer autoloader
 require_once ROOT_DIR . '/vendor/autoload.php';
+
+#-------------------------------
+# Set APP_ENV if not already set
+if(Icebox\Utils::env('APP_ENV') === null) {
+    if (isset($argv[1]) && $argv[1] === 'test') {
+        $_ENV['APP_ENV'] = 'test';
+    } else {
+        $_ENV['APP_ENV'] = 'development';
+    }
+}
+
+#---------------------------
+# Load environment variables
+$env_file = dirname(__DIR__) . '/.env.'.Icebox\Utils::env('APP_ENV');
+if(file_exists($env_file)) {
+  $dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__), '.env.'.Icebox\Utils::env('APP_ENV'));
+  $dotenv->load();
+} else {
+  # show warning here
+}
+
+// Add handlers (no default handlers - you must add at least one)
+Icebox\Log::addFileHandler(dirname(__DIR__) . '/log/' . Icebox\Utils::env('APP_ENV') . '.log');
+Icebox\Log::addStdoutHandler(); // For CLI output
+Icebox\Log::addSyslogHandler(); // For Syslog output
+
+// Log messages
+Icebox\Log::info('User logged in');
+Icebox\Log::error('Database connection failed', ['db' => 'primary']);
+Icebox\Log::debug('Processing request', ['method' => 'GET']);

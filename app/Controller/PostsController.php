@@ -57,7 +57,7 @@ class PostsController extends AppController
     public function update()
     {
         $post = Post::find(Request::params('id'));
-        $updated = $post->update_attributes($this->post_params());
+        $updated = $post->updateAttributes($this->post_params());
 
         if($updated) {
             $this->flash('success', 'Updated successfully');
