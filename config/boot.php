@@ -26,20 +26,28 @@ if(Icebox\Utils::env('APP_ENV') === null) {
 
 #---------------------------
 # Load environment variables
+$env_file_error = null;
 $env_file = dirname(__DIR__) . '/.env.'.Icebox\Utils::env('APP_ENV');
 if(file_exists($env_file)) {
   $dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__), '.env.'.Icebox\Utils::env('APP_ENV'));
   $dotenv->load();
 } else {
-  # show warning here
+  $env_file_error = '.env.'.Icebox\Utils::env('APP_ENV') . ' file not found';
 }
 
-// Add handlers (no default handlers - you must add at least one)
+#---------------------------
+# Add handlers (no default handlers - you must add at least one)
 Icebox\Log::addFileHandler(dirname(__DIR__) . '/log/' . Icebox\Utils::env('APP_ENV') . '.log');
 Icebox\Log::addStdoutHandler(); // For CLI output
 Icebox\Log::addSyslogHandler(); // For Syslog output
 
+#--------------------
+# show env_file error
+if($env_file_error !== null) {
+  Icebox\Log::warning($env_file_error);
+}
+
 // Log messages
-Icebox\Log::info('User logged in');
-Icebox\Log::error('Database connection failed', ['db' => 'primary']);
-Icebox\Log::debug('Processing request', ['method' => 'GET']);
+// Icebox\Log::info('User logged in');
+// Icebox\Log::error('Database connection failed', ['db' => 'primary']);
+// Icebox\Log::debug('Processing request', ['method' => 'GET']);
