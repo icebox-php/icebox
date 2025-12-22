@@ -10,4 +10,7 @@ vendor/
 !/log/.keep
 !/tmp/.keep
 
+# Ignore sqlite datbase files
+db/*.sqlite
+
 config/database.php
