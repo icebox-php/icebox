@@ -14,7 +14,7 @@ require __DIR__ . '/config/boot.php';
 // $_SERVER['SERVER_PORT'] = 80;
 
 // $project_directory = '';
-// $app = new App(__FILE__, $project_directory);
+// $app = new Icebox\App(__FILE__);
 
 // include ROOT_DIR.'/config/initializer.php';
 // $routes = include ROOT_DIR.'/config/routes.php';

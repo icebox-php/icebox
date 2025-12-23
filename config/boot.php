@@ -14,6 +14,10 @@ define('ROOT_DIR', dirname(__DIR__));
 # Load Composer autoloader
 require_once ROOT_DIR . '/vendor/autoload.php';
 
+# set basePath
+$basePath = dirname(__DIR__);
+Icebox\App::setBasePath($basePath);
+
 #-------------------------------
 # Set APP_ENV if not already set
 if(Icebox\Utils::env('APP_ENV') === null) {

@@ -14,8 +14,10 @@ use Icebox\App;
 use Icebox\Routing;
 use Icebox\Web;
 
-$app = new App(__FILE__);
-$routes = include ROOT_DIR . '/config/routes.php';
+// $app = new App(__FILE__);
+// $routes = include ROOT_DIR . '/config/routes.php';
 
-$web = new Web($app, $routes);
-$web->run();
+// $web = new Web();
+// $web->run();
+define('DEBUG', true);
+Web::run();
