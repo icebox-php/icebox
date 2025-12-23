@@ -55,3 +55,6 @@ if($env_file_error !== null) {
 // Icebox\Log::info('User logged in');
 // Icebox\Log::error('Database connection failed', ['db' => 'primary']);
 // Icebox\Log::debug('Processing request', ['method' => 'GET']);
+
+require 'application.php'; // set configurations here
+require 'environments/' . Icebox\Utils::env('APP_ENV') . '.php'; // add or override configutions here

@@ -14,6 +14,8 @@
 <div>Random string: <?php echo md5(microtime()); ?></div>
 <div><?php \Icebox\Log::info('--- home page view ---'); ?></div>
 
+<div>-- <?php print_r(Icebox\Config::all()); ?> --</div> <br/><br/>
+
 <?php $this->start_content('user_style'); ?>
   <style type="text/css">
     .underline-text {

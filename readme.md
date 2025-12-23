@@ -18,8 +18,8 @@ Page 2: http://localhost/my-app/index.php/leap_year/2012 <br><br>
 
 # How to run this web-app
 
-$ cd project_root
-$ composer install
+`cd project_root`
+`composer install`
 
 # Example urls to test params
 
@@ -29,7 +29,7 @@ invalid url: http://localhost/my-app/about/marketing/item/5/title2/some-text
 
 # How to run testsuite
 
-$ vendor/bin/phpunit ./Test/
+`vendor/bin/phpunit ./Test/`
 
 # How to upload image
 
@@ -70,4 +70,28 @@ if($saved) {
 
 ```
   <img src="<?php echo App::root_url(); ?>/images/<?php echo $post->picture; ?>" alt="">
+```
+
+# Configuration
+
+You can dynamically configure your application using `App::configure()` and retrieve values with `App::config()`.
+
+```php
+// Usage
+App::configure([
+    'log_level' => 'info',
+    'time_zone' => 'UTC',
+    'nested' => [
+        'option' => 'some-value',
+    ]
+]);
+
+// Later, override specific values
+App::configure([
+    'log_level' => 'debug', // This overrides the previous value
+]);
+
+echo App::config('log_level'); // 'debug'
+echo App::config('time_zone'); // 'UTC'
+echo App::config('nested.option'); // 'some-value'
 ```
