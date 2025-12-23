@@ -1,5 +1,6 @@
 <?php
 use Icebox\App;
+use Icebox\Url;
 ?><!doctype html>
 <html lang="en">
   <head>
@@ -11,8 +12,8 @@ use Icebox\App;
     <title>IceBox Web Framework</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="<?php echo App::root_url('/assets/css/bootstrap.min.css'); ?>">
-    <link rel="stylesheet" href="<?php echo App::root_url('/assets/css/site.css'); ?>">
+    <link rel="stylesheet" href="<?php echo Url::asset('css/bootstrap.min.css'); ?>">
+    <link rel="stylesheet" href="<?php echo Url::asset('css/site.css'); ?>">
   </head>
   <body>
     <?php $this->render('/Layout/_nav'); ?>
