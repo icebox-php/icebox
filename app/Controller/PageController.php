@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Controller\AppController;
 use App\Model\Post;
 use Icebox\App;
+use Icebox\Url;
 
 class PageController extends AppController
 {
@@ -25,7 +26,7 @@ class PageController extends AppController
 
     public function flash_message() {
       $this->flash('success', 'This is a flash message');
-      return $this->redirect(App::root_url('/posts'));
+      return $this->redirect(Url::absolute('/posts'));
     }
 
     public function about() {

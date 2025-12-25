@@ -40,10 +40,17 @@ if(file_exists($env_file)) {
 }
 
 #---------------------------
+# load configurations
+require 'application.php'; // set aaplication configurations here
+// load environment specific configuration add configuration or override application configutions here
+require 'environments/' . Icebox\Utils::env('APP_ENV') . '.php';
+
+#---------------------------
 # Add handlers (no default handlers - you must add at least one)
-Icebox\Log::addFileHandler(dirname(__DIR__) . '/log/' . Icebox\Utils::env('APP_ENV') . '.log');
-Icebox\Log::addStdoutHandler(); // For CLI output
-Icebox\Log::addSyslogHandler(); // For Syslog output
+$log_level = 'error'; //Icebox\Config::get('log_level');
+Icebox\Log::addFileHandler(dirname(__DIR__) . '/log/' . Icebox\Utils::env('APP_ENV') . '.log', $log_level);
+Icebox\Log::addStdoutHandler($log_level); // For CLI output
+Icebox\Log::addSyslogHandler($log_level); // For Syslog output
 
 #--------------------
 # show env_file error
@@ -55,6 +62,3 @@ if($env_file_error !== null) {
 // Icebox\Log::info('User logged in');
 // Icebox\Log::error('Database connection failed', ['db' => 'primary']);
 // Icebox\Log::debug('Processing request', ['method' => 'GET']);
-
-require 'application.php'; // set configurations here
-require 'environments/' . Icebox\Utils::env('APP_ENV') . '.php'; // add or override configutions here

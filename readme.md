@@ -78,7 +78,7 @@ You can dynamically configure your application using `App::configure()` and retr
 
 ```php
 // Usage
-App::configure([
+Config::set([
     'log_level' => 'info',
     'time_zone' => 'UTC',
     'nested' => [
@@ -87,11 +87,11 @@ App::configure([
 ]);
 
 // Later, override specific values
-App::configure([
+Config::set([
     'log_level' => 'debug', // This overrides the previous value
 ]);
 
-echo App::config('log_level'); // 'debug'
-echo App::config('time_zone'); // 'UTC'
-echo App::config('nested.option'); // 'some-value'
+echo Config::get('log_level'); // 'debug'
+echo Config::get('time_zone'); // 'UTC'
+echo Config::get('nested.option'); // 'some-value'
 ```

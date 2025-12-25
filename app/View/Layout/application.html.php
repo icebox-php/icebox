@@ -1,5 +1,4 @@
 <?php
-use Icebox\App;
 use Icebox\Url;
 ?><!doctype html>
 <html lang="en">
@@ -34,7 +33,7 @@ use Icebox\Url;
       <footer class="pt-4 my-md-5 pt-md-5 border-top">
         <div class="row">
           <div class="col-12 col-md">
-            <img class="mb-2" src="<?php echo App::root_url('/assets/img/bootstrap-solid.svg'); ?>" alt="" width="24" height="24">
+            <img class="mb-2" src="<?php echo  Url::asset('/assets/img/bootstrap-solid.svg'); ?>" alt="" width="24" height="24">
             <small class="d-block mb-3 text-muted">&copy; 2017-2018</small>
           </div>
           <div class="col-6 col-md">
@@ -70,10 +69,10 @@ use Icebox\Url;
       </footer>
     </div>
 
-    <script src="<?php echo App::root_url('/assets/js/jquery-3.3.1.slim.min.js'); ?>"></script>
-    <script src="<?php echo App::root_url('/assets/js/popper.min.js'); ?>">></script>
-    <script src="<?php echo App::root_url('/assets/js/bootstrap.min.js'); ?>">></script>
-    <script src="<?php echo App::root_url('/assets/js/site.js'); ?>">></script>
+    <script src="<?php echo Url::asset('/assets/js/jquery-3.3.1.slim.min.js'); ?>"></script>
+    <script src="<?php echo Url::asset('/assets/js/popper.min.js'); ?>">></script>
+    <script src="<?php echo Url::asset('/assets/js/bootstrap.min.js'); ?>">></script>
+    <script src="<?php echo Url::asset('/assets/js/site.js'); ?>">></script>
 
   </body>
 </html>

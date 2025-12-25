@@ -12,7 +12,14 @@
 <?php //echo ICEBOX_DIRECTORY_PUBLIC; //echo App::file(); ?> <br>
 <?php //echo ICEBOX_DIRECTORY_SRC; //echo App::file(); ?> <br>
 <div>Random string: <?php echo md5(microtime()); ?></div>
-<div><?php \Icebox\Log::info('--- home page view ---'); ?></div>
+
+<?php
+\Icebox\Log::info('--- home page view ---');
+\Icebox\Log::error('--- this is error log ---');
+\Icebox\Log::critical('--- this is critical log ---');
+\Icebox\Log::alert('--- this is alert log ---');
+\Icebox\Log::emergency('--- this is emergency log ---');
+?>
 
 <div>-- <?php print_r(Icebox\Config::all()); ?> --</div> <br/><br/>
 
