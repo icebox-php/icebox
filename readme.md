@@ -2,30 +2,30 @@
 
 `composer create-project icebox-php/icebox my-app` <br>
 `cd my-app` <br>
-`composer install` <br>
-`php icebox server` <br>
-It will run server to http://localhost:8000 <br>
-
-If you want to run in different host and port <br>
-`php icebox server --host=0.0.0.0 --port=8022` <br>
-It will run server to http://0.0.0.0:8022 <br>
-
-
-Home: http://localhost/my-app/index.php <br>
-Page 2: http://localhost/my-app/index.php/leap_year/2012 <br><br>
-
-
 
 # How to run this web-app
 
-`cd project_root`
-`composer install`
+`cd my-app` <br>
+`composer install` <br>
+`php icebox server` <br>
+It will run server to this url http://localhost:8800 <br>
 
-# Example urls to test params
+If you want to run in different host and port <br>
+`php icebox server --host=0.0.0.0 --port=8802` <br>
+It will run server to this url http://0.0.0.0:8802 <br><>br
 
-valid url: http://localhost/my-app/about/marketing/item/5/title/some-text  
-invalid url: http://localhost/my-app/about/marketing/item/5/title2/some-text
 
+Home: http://localhost/my-app/index.php <br><br>
+Page 2: http://localhost/my-app/index.php/leap_year/2012 <br>
+   or : http://localhost/my-app/leap_year/2012 <br><br>
+
+## Example urls to test params
+
+http://localhost/my-app/about/marketing/item/5/title/some-text  
+
+## 404 error page
+
+http://localhost/my-app/an-invalid-url
 
 # How to run testsuite
 
