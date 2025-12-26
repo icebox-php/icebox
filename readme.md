@@ -12,7 +12,7 @@ It will run server to this url http://localhost:8800 <br>
 
 If you want to run in different host and port <br>
 `php icebox server --host=0.0.0.0 --port=8802` <br>
-It will run server to this url http://0.0.0.0:8802 <br><>br
+It will run server to this url http://0.0.0.0:8802 <br><br>
 
 
 Home: http://localhost/my-app/index.php <br><br>
