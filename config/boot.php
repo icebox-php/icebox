@@ -47,7 +47,7 @@ require 'environments/' . Icebox\Utils::env('APP_ENV') . '.php';
 
 #---------------------------
 # Add handlers (no default handlers - you must add at least one)
-$log_level = 'error'; //Icebox\Config::get('log_level');
+$log_level = Icebox\Config::get('log_level');
 Icebox\Log::addFileHandler(dirname(__DIR__) . '/log/' . Icebox\Utils::env('APP_ENV') . '.log', $log_level);
 Icebox\Log::addStdoutHandler($log_level); // For CLI output
 Icebox\Log::addSyslogHandler($log_level); // For Syslog output
