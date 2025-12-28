@@ -5,4 +5,5 @@ Icebox\Config::set([
     'force_ssl' => true, // if you set it false, Icebox will use scheme from request
     'asset_host' => 'http://localhost',
     'log_level' => 'info',
+    'debug' => false,
 ]);
