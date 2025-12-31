@@ -1,7 +1,7 @@
 <?php
 $icebox_cli = __DIR__ . '/vendor/icebox-php/framework/icebox';
 if (!file_exists($icebox_cli)) {
-    echo "Error: $icebox_cli not found. Run 'composer install' first.\n";
+    echo "Composer autoload not found. Run \"composer install\".\n";
     exit(1);
 }
 
